@@ -2,18 +2,20 @@ set nocompatible
 filetype off
 
 set rtp+=/usr/local/go/misc/vim
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'gmarik/vundle'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'tpope/vim-fugitive'
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'YankRing.vim'
-Bundle 'git://git.wincent.com/command-t.git'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'L9'
+Plugin 'FuzzyFinder'
+Plugin 'YankRing.vim'
+Plugin 'git://git.wincent.com/command-t.git'
+
+call vundle#end()
 
 let g:CommandTMatchWindowAtTop = 1
 let g:EasyMotion_leader_key = ';'
