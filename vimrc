@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
 
+set rtp+=/usr/local/go/misc/vim
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
@@ -24,7 +25,7 @@ colorscheme solarized
 
 " Indentation
 filetype plugin indent on
-au BufNewFile,BufReadPost *.rb,*.erb,*.css setl shiftwidth=2 expandtab
+au BufNewFile,BufReadPost *.go,*.rb,*.erb,*.css,*.scss,*.html,*.js setl shiftwidth=2 expandtab
 
 " Mappings
 let mapleader = ","
@@ -34,6 +35,7 @@ nmap <Leader>f :FufFile<CR>
 nmap <Leader>F :FufCoverageFile<CR>
 nmap <Leader>k :bd<CR>
 nmap <Leader>K :bd!<CR>
+nmap <Leader>n :enew<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>Q :q!<CR>
 nmap <Leader>t :CommandT<CR>
@@ -45,6 +47,7 @@ imap jk <Esc>
 
 " Settings
 set background=dark
+set cursorline
 set guifont=Monaco:h14
 set guioptions-=T
 set hidden
@@ -59,6 +62,7 @@ set noswapfile
 set nowrap
 set number
 set smartcase
+set wildignore+=bin/**
 set wildignore+=vendor/**
 
 fun! <SID>StripTrailingWhitespace()
